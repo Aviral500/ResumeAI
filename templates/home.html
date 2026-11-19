@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}ResumeAI | Home{% endblock %}
+{% block content %}
+<section class="hero">
+  <p class="eyebrow">AI-POWERED RECRUITMENT</p>
+  <h1>Resume Screening &<br><span>Job Matching</span></h1>
+  <p class="hero-text">A lightweight platform for candidates to discover jobs and for recruiters to screen resumes using ATS, skill matching and TF-IDF similarity.</p>
+</section>
+
+<section class="portal-grid">
+  <a class="portal-card candidate-card" href="{{url_for('auth.login')}}">
+    <div class="portal-icon">👤</div>
+    <div><p class="eyebrow">CANDIDATE</p><h2>Candidate Login</h2><p>Browse jobs, apply with your resume and view AI screening results.</p></div>
+    <span class="arrow">→</span>
+  </a>
+  <a class="portal-card candidate-card" href="{{url_for('auth.register')}}">
+    <div class="portal-icon">✦</div>
+    <div><p class="eyebrow">CANDIDATE</p><h2>Create Candidate Account</h2><p>Register a new candidate profile and start applying to jobs.</p></div>
+    <span class="arrow">→</span>
+  </a>
+  <a class="portal-card admin-card" href="{{url_for('admin.admin_login')}}">
+    <div class="portal-icon">🔐</div>
+    <div><p class="eyebrow">RECRUITER / ADMIN</p><h2>Admin Login</h2><p>Manage job postings, review applicants and inspect screening results.</p></div>
+    <span class="arrow">→</span>
+  </a>
+  <a class="portal-card admin-card" href="{{url_for('admin.admin_register')}}">
+    <div class="portal-icon">＋</div>
+    <div><p class="eyebrow">RECRUITER / ADMIN</p><h2>Admin Registration</h2><p>Create an administrator account for managing recruitment activities.</p></div>
+    <span class="arrow">→</span>
+  </a>
+</section>
+
+<section class="feature-strip">
+  <div><strong>ATS Analysis</strong><span>Resume structure & keyword checks</span></div>
+  <div><strong>Skill Matching</strong><span>Matched & missing skills</span></div>
+  <div><strong>TF-IDF Similarity</strong><span>Resume-to-job relevance</span></div>
+  <div><strong>Job Management</strong><span>Post and review applications</span></div>
+</section>
+{% endblock %}
